@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Cairo:wght@700&family=Inter:wght@300;400;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Outfit&family=Poppins:wght@200;400;600&family=Red+Hat+Display:wght@300;400;500&display=swap');
+:root {
+    
+    /* ### Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* ### Neutral */
+    
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    Font-size: 15px;
+  }
+
+body {
+    font-family: "Poppins" sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container {
+margin: 100px;
+}
+
+.card {
+    /* display: flex;
+    flex-direction: column; */
+    text-align: center;
+}
+@media (max-width:767px){
+    .card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.card h1 {
+    margin-bottom: 20px;
+}
+.card :first-child{
+    color: hsl(229, 6%, 66%);
+    font-weight: 100;
+}
+.card h1 {
+    color: hsl(234, 12%, 34%);
+}
+.card p {
+    color: hsl(229, 6%, 66%);
+    width: 375px;
+    margin: 50px auto 80px;
+    line-height: 1.6;
+
+}
+@media (max-width:767px){
+    .card p {
+        width: 200px;
+    }
+}
+.test {
+    text-align: center;
+    border-top: 5px solid var(--Red);
+    border-radius: 6px;
+    width: fit-content;
+    margin: 50px auto ;
+}
+.test h3 {
+    margin: 20px 0;
+    color: var(--Very-Dark-Blue);
+}
+
+.test p {
+
+    color: var(--Grayish-Blue);
+    word-spacing: 2px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap ;
+    text-align: center;
+}
+.info .three {
+    border-top: 5px solid var(--Cyan) ;
+    border-radius: 6px;
+}
+.info .three h3 {
+    margin: 20px ;
+    color: var(--Very-Dark-Blue);
+}
+.info .three p {
+    color: var(--Grayish-Blue);
+    margin-left:  20px ;
+    line-height: 1.6;
+}
+.info .image img {
+    transform: translateX(200%); 
+    margin: 50%;
+    transform: translateY(-50%); 
+}
+@media (max-width:767px){
+    .info .image img {
+        transform: translateX(0%);
+        transform: translateY(0%);
+        margin: 30% 0;
+    }
+}
+.info .four {
+    border-top: 5px solid var(--Blue) ;
+    border-radius: 6px; 
+}
+.info .four h3 {
+    margin: 20px ;
+    color: var(--Very-Dark-Blue);
+}
+.info .four p {
+    color: var(--Grayish-Blue);
+    margin-left:  20px ;
+    line-height: 1.6;
+}
+.text {
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin: 100px 0;
+}
+@media (max-width:767px){
+    .text {
+
+flex-direction: column;  
+  }
+}
+.text .ima {
+    transform: translateX(300%);
+}
+@media (max-width:767px){
+    .text .ima {
+        transform: translateX(0%);
+        transform: translateY(-30%);
+    }
+}
+.text .five {
+    border-top: 5px solid var(--Orange) ;
+    border-radius: 6px; 
+}
+.text .five h3 {
+    margin: 20px 0 ;
+    color: var(--Very-Dark-Blue);
+    text-align: center;
+}
+@media (max-width:767px){
+    .text .five h3 {
+        margin: 100px auto ;
+    }
+}
+.text .five p {
+    color: var(--Grayish-Blue);
+    margin-left:  20px ;
+    line-height: 1.6;
+}
+
+@media (max-width:767px){
+    .text :last-child {
+        transform: translateY(-100%);
+    }
+}
+.imagee {
+    text-align: center;
+}
+    /* Start compoents  */
+
+/* ده طيطل بيكون موجود معانا في التصميم علي طول  */
+.main-title {
+    text-transform: uppercase;
+    margin: 100px auto 50px;
+    border: 2px solid var(--Very-Dark-Blue);
+    padding: 10px 20px;
+    font-size: 22px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+  }
+  .main-title a {
+      color: rgb(53, 37, 37);
+  }
+  .main-title::before,
+  .main-title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color:var(--Very-Dark-Blue);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+  }
+  /* في الانمشن تحت خلينا - 30 خلنها 50%  */
+  .main-title::before {
+    transform: translateY(-50%);
+    left: -30px;
+  }
+  /* في الانمشن تحت خلينا - 30 خلنها 50%  */
+  .main-title::after {
+    transform: translateY(-50%);
+    right: -30px;
+  }
+  .main-title:hover::before {
+    color: blue;
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+  }
+  .main-title:hover::after {
+    z-index:-1;
+    animation: right-move 0.5s linear forwards;
+  }
+  .main-title:hover {
+     color: white; 
+    border: 2px solid white;
+    transition-delay: 0.5s; 
+    
+  }
+
+  @keyframes left-move {
+    50% {
+      left: 0;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      left: 0;
+      border-radius: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  @keyframes right-move {
+    50% {
+  right: 0;
+  width: 12px;
+  height: 12px;
+    }
+    100% {
+      right: 0;
+      border-radius: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+    /* end compoents  */
+
+.attribution { font-size: 11px;
+     text-align: center;
+     background-color: var(--Cyan);
+     padding: 20px 10px;
+     transition: 03s;
+ 
+ }
+ 
+         
+         .attribution:hover{
+             font-size: 18px;
+             color: rgb(78, 37, 37);
+             background-color: var(--Very-Dark-Blue);
+         }
+         @media (max-width:767px){
+             .attribution:hover {
+                 font-size: 14px;
+             }
+         }
+        .attribution a {
+        text-decoration: none;
+        color: rgb(54, 66, 84);
+        } 
+    
